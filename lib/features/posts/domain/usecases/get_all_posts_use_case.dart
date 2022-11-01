@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:posts_app/core/error/failures.dart';
-import 'package:posts_app/features/posts/domain/entities/post.dart';
+import 'package:posts_app/features/posts/domain/entities/post_entity.dart';
 import 'package:posts_app/features/posts/domain/repositories/posts_repository.dart';
 
 class GetAllPostsUseCase {
@@ -8,7 +8,7 @@ class GetAllPostsUseCase {
 
   final PostsRepository repository;
 
-  Future<Either<Failure, List<Post>>> call() async {
+  Future<Either<Failure, List<PostEntity>>> call() async {
     return await repository.getAllPosts();
   }
 }
